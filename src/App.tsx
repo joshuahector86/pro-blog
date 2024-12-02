@@ -1,5 +1,9 @@
 function App() {
-  return <>yer</>;
+  return (
+    <>
+      <div className="text-3xl font-bold underline">yesr</div>
+    </>
+  );
 }
 
 export default App;
