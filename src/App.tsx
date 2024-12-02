@@ -1,8 +1,17 @@
+import { blog_background } from "./assets";
+import { LandingPage } from "./pages";
+
 function App() {
   return (
-    <>
-      <div className="text-3xl font-bold underline">yesr</div>
-    </>
+    <div
+      style={{
+        backgroundImage: `url(${blog_background})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <LandingPage />
+    </div>
   );
 }
 
