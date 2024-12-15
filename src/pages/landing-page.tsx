@@ -38,9 +38,9 @@ const LandingPage = () => {
 
 const BlogContent = () => {
   return (
-    <div className="bg-background border rounded-2xl p-2 md:min-w-[35rem] md:min-h-[35rem]">
+    <div className="bg-background border rounded-2xl p-2">
       <BlogThreadStart />
-      <ScrollArea>
+      <ScrollArea className="md:h-[500px]">
         <BlogFeedCard />
       </ScrollArea>
     </div>
