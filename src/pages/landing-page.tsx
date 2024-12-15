@@ -2,11 +2,21 @@ import LeftNavBar from "@/components/left-side-bar";
 import RightSideBar from "@/components/right-side-bar";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import { blog_avatar } from "@/assets";
 import { Input } from "@/components/ui/input";
 import { ImageIcon, PlusSquareIcon, XCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import BlogFeedCard from "@/components/blog-feed-card";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const LandingPage = () => {
   return (
@@ -28,17 +38,18 @@ const LandingPage = () => {
 
 const BlogContent = () => {
   return (
-    <div className="border rounded-2xl p-2 md:min-w-[35rem] md:min-h-[35rem]">
+    <div className="bg-background border rounded-2xl p-2 md:min-w-[35rem] md:min-h-[35rem]">
       <BlogThreadStart />
-      <div>blog feed</div>
-      <Badge className="rounded-full">hello</Badge>
+      <ScrollArea>
+        <BlogFeedCard />
+      </ScrollArea>
     </div>
   );
 };
 
 const BlogThreadStart = () => {
   return (
-    <div className="p-2">
+    <div className="p-2 flex flex-col gap-2">
       <div className="flex justify-between items-center">
         <div className="flex gap-2 items-center p-2">
           <Avatar>
@@ -53,7 +64,7 @@ const BlogThreadStart = () => {
       </div>
       <Input placeholder="Start a thread..." className="rounded-xl" />
       <div className="flex justify-between">
-        <div className="flex p-2 gap-2">
+        <div className="flex p-2 gap-2 max-h-9">
           <Badge className="rounded-full border flex gap-1 items-center px-2">
             <ImageIcon size={15} />
             <p className="text-xs">vacation02.jpg</p>
@@ -65,8 +76,20 @@ const BlogThreadStart = () => {
             <p>Attach file</p>
           </Badge>
         </div>
-        <div>dropdown menu</div>
+        <div className="p-2">
+          <Select>
+            <SelectTrigger className="w-[180px] rounded-full max-h-6 bg-background">
+              <SelectValue placeholder="Select an option" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="light">Anyone can replay</SelectItem>
+              <SelectItem value="replay-once">Replay once</SelectItem>
+              <SelectItem value="view-your-posts">View your posts</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
+      <Separator />
     </div>
   );
 };
