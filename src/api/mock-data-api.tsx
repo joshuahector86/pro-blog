@@ -63,3 +63,62 @@ export const mock_data_posts = [
     timePostedAgo: "6m",
   },
 ];
+
+export const mock_data_followers = [
+  {
+    name: "Irael Osario",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "King Jamison  ",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Chirstian Burse",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Gina Nailiah",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Aminah Rust",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Coltish Academic",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Bossy Jocey",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Kyle Redwine",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Hector Lopez",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Daniel Doodman",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Business Guy",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Andrew McCalloy",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Cody Fisher",
+    userAvatar: blog_avatar,
+  },
+  {
+    name: "Brandon Feels",
+    userAvatar: blog_avatar,
+  },
+];

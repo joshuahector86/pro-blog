@@ -8,12 +8,20 @@ import {
 
 const LeftNavBar = () => {
   return (
-    <div className="flex flex-col gap-4 text-muted-foreground border p-3 rounded-full bg-gray-900">
-      <HomeIcon size={20} />
-      <SearchIcon size={20} />
-      <PenBoxIcon size={20} />
-      <HeartIcon size={20} />
-      <PersonStandingIcon size={20} />
+    <div className="text-muted-foreground w-[3rem]">
+      <div className="flex flex-col items-center gap-4 border p-3 rounded-full">
+        <HomeIcon
+          size={30}
+          className="hover:bg-gray-800 bg-gray-800 p-1 rounded-full"
+        />
+        <SearchIcon size={30} className="hover:bg-gray-800 p-1 rounded-full" />
+        <PenBoxIcon size={30} className="hover:bg-gray-800 p-1 rounded-full" />
+        <HeartIcon size={30} className="hover:bg-gray-800 p-1 rounded-full" />
+        <PersonStandingIcon
+          size={30}
+          className="hover:bg-gray-800 p-1 rounded-full"
+        />
+      </div>
     </div>
   );
 };

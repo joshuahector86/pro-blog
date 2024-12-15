@@ -20,15 +20,15 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 const LandingPage = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen ">
-      <div className="gap-10 grid grid-cols-6">
+    <div className="flex justify-center items-center min-h-screen p-[11rem]">
+      <div className="grid grid-cols-11">
         <div className="col-span-1 place-content-center">
           <LeftNavBar />
         </div>
-        <div className="col-span-3 ">
+        <div className="col-span-7 ">
           <BlogContent />
         </div>
-        <div className="col-span-2">
+        <div className="col-span-3">
           <RightSideBar />
         </div>
       </div>
@@ -38,7 +38,7 @@ const LandingPage = () => {
 
 const BlogContent = () => {
   return (
-    <div className="bg-background border rounded-2xl p-2">
+    <div className="bg-background border rounded-l-2xl p-2">
       <BlogThreadStart />
       <ScrollArea className="md:h-[500px]">
         <BlogFeedCard />
@@ -58,7 +58,7 @@ const BlogThreadStart = () => {
           </Avatar>
           <div>John Smith</div>
         </div>
-        <Button variant={"ghost"} className="bg-gray-700 rounded-full">
+        <Button variant={"ghost"} className=" rounded-full">
           Post
         </Button>
       </div>
