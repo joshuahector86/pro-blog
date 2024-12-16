@@ -23,7 +23,6 @@ const BlogFeedCard = () => {
             </Avatar>
             <Separator orientation="vertical" className="h-[85%]" />
           </div>
-
           <div>
             <CardHeader>
               <div className="flex justify-between items-center mt-[-1.75rem]">
