@@ -17,18 +17,17 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import BlogFeedCard from "@/components/blog-feed-card";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Card } from "@/components/ui/card";
 
 const LandingPage = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen p-[11rem]">
-      <div className="grid grid-cols-11">
-        <div className="col-span-1 place-content-center">
-          <LeftNavBar />
-        </div>
-        <div className="col-span-7 ">
-          <BlogContent />
-        </div>
-        <div className="col-span-3">
+    <div className="flex justify-center items-center min-h-screen p-4 max-w-[1400px]">
+      <div className="hidden lg:block mr-4">
+        <LeftNavBar />
+      </div>
+      <div className="flex">
+        <BlogContent />
+        <div className="hidden md:block h-full">
           <RightSideBar />
         </div>
       </div>
@@ -38,12 +37,12 @@ const LandingPage = () => {
 
 const BlogContent = () => {
   return (
-    <div className="bg-background border rounded-l-2xl p-2">
+    <Card className="bg-background border rounded-r-lg p-2">
       <BlogThreadStart />
-      <ScrollArea className="md:h-[500px]">
+      <ScrollArea className="h-[500px]">
         <BlogFeedCard />
       </ScrollArea>
-    </div>
+    </Card>
   );
 };
 
@@ -65,20 +64,19 @@ const BlogThreadStart = () => {
       <Input placeholder="Start a thread..." className="rounded-xl" />
       <div className="flex justify-between">
         <div className="flex p-2 gap-2 max-h-9">
-          <Badge className="rounded-full border flex gap-1 items-center px-2">
-            <ImageIcon size={15} />
-            <p className="text-xs">vacation02.jpg</p>
-            <XCircle size={15} />
-          </Badge>
-
           <Badge className="rounded-full text-xs gap-1">
             <PlusSquareIcon size={15} />
             <p>Attach file</p>
           </Badge>
+          <Badge className="rounded-full border md:flex gap-1 items-center px-2 hidden ">
+            <ImageIcon size={15} />
+            <p className="text-xs">vacation02.jpg</p>
+            <XCircle size={15} />
+          </Badge>
         </div>
         <div className="p-2">
           <Select>
-            <SelectTrigger className="w-[180px] rounded-full max-h-6 bg-background">
+            <SelectTrigger className="w-[180px] rounded-full max-h-6 bg-background ">
               <SelectValue placeholder="Select an option" />
             </SelectTrigger>
             <SelectContent>

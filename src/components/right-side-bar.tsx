@@ -8,16 +8,16 @@ import { blog_avatar, blog_background } from "@/assets";
 
 const RightSideBar = () => {
   return (
-    <Card className="p-6 h-full rounded-l-lg">
+    <Card className="p-6 rounded-l-lg">
       <div>
-        <div className="flex justify-between items-center">
+        <div className="flex-col flex w-full gap-2 lg:gap-0 lg:flex-row justify-center lg:justify-between items-center">
           <h1>Follow Suggestions</h1>
-          <Button variant={"ghost"} className="rounded-full">
+          <Button variant={"ghost"} className="rounded-full hidden lg:block">
             View All
           </Button>
         </div>
 
-        <ScrollArea className="md:h-[300px]">
+        <ScrollArea className="md:h-[320px]">
           {mock_data_followers.map((follower) => (
             <div className="flex items-center justify-between mt-2">
               <div className="flex gap-4 items-center">
@@ -34,11 +34,11 @@ const RightSideBar = () => {
       </div>
       <Separator className="mt-4" />
 
-      <ScrollArea className="md:h-[275px]">
+      <ScrollArea className="md:h-[300px]">
         <div className="flex flex-col gap-2 p-2">
           <div className="flex items-center justify-between">
-            <div>@ Today on Threads</div>
-            <Button className="rounded-full" variant={"ghost"}>
+            <h1 className="font-semibold">@ Today on Threads</h1>
+            <Button className="rounded-full hidden lg:block" variant={"ghost"}>
               View All
             </Button>
           </div>
